@@ -1,0 +1,5 @@
+---
+- name: install docker engine
+  shell: curl -sSL https://get.docker.com/ | sh
+- name: start docker service on boot
+  service: enabled=yes name=docker state=started
